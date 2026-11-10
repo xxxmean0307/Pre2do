@@ -24,5 +24,6 @@ Thumbs.db
 ui.xml/
 .workbuddy/
 oss/
+.gh-config/
 *.apk
 *.aab
