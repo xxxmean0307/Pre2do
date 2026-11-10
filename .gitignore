@@ -1,0 +1,28 @@
+# ── Android / Gradle ──
+*.iml
+.gradle/
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+.kotlin/
+/app/build/
+/app/debug/
+/app/release/
+
+# ── IDE / 操作系统 ──
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ── 本机验收资料与工具链（不属于开源仓库）──
+# SDK、JDK、Gradle 发行包、AVD、截图、控件树等体积巨大且含本机路径，
+# 请勿加入版本控制；clone 后请用自己机器上的 Android SDK 构建。
+.tools/
+ui.xml/
+.workbuddy/
+oss/
+*.apk
+*.aab

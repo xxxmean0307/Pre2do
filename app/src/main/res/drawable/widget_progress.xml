@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 小组件进度条：粉釉胶囊轨道 + 渐变填充 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="#2EE0A0B8" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp" />
+                <gradient
+                    android:angle="0"
+                    android:startColor="#F5BDC9"
+                    android:endColor="#E79BB4" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

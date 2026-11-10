@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pre2do</string>
+
+    <!-- 底部导航 -->
+    <string name="tab_home">今日</string>
+    <string name="tab_schedule">日程</string>
+    <string name="tab_stats">统计</string>
+    <string name="tab_more">我的</string>
+
+    <!-- 通用 -->
+    <string name="action_confirm">确认</string>
+    <string name="action_cancel">取消</string>
+
+    <!-- 里程碑 1 空壳页面 -->
+    <string name="home_title">今日</string>
+    <string name="schedule_title">日程</string>
+    <string name="stats_title">统计</string>
+    <string name="more_title">我的</string>
+    <string name="shell_placeholder">功能建设中，敬请期待</string>
+
+    <!-- 一键导入（里程碑 2） -->
+    <string name="import_cta">一键导入日程</string>
+    <string name="import_sheet_title">导入日程</string>
+    <string name="import_opt_clipboard">粘贴剪贴板</string>
+    <string name="import_opt_clipboard_hint">从剪贴板读取日程 JSON</string>
+    <string name="import_opt_file">选择 JSON 文件</string>
+    <string name="import_opt_file_hint">从文件选择器选取 .json 文件</string>
+    <string name="import_opt_share">从分享进入</string>
+    <string name="import_opt_share_hint">在其他 App 中把文本或 .json 分享给「Pre2do」，将直接进入预览</string>
+    <string name="import_preview_title">导入预览</string>
+    <string name="import_confirm">确认导入</string>
+    <string name="import_saving">正在保存…</string>
+    <string name="import_done">已导入</string>
+    <string name="import_parsing">正在解析日程…</string>
+    <string name="import_back">返回</string>
+    <string name="import_ok">知道了</string>
+    <string name="import_error_title">导入遇到问题</string>
+    <string name="import_error_hint">未写入任何数据，请修改后重新导入</string>
+    <string name="import_overwrite_title">将覆盖当天已有日程</string>
+    <string name="import_overwrite_message">该日期已经导入过日程，继续会覆盖原有任务，确定吗？</string>
+    <string name="import_overwrite_confirm">继续导入</string>
+    <string name="label_will_overwrite">将覆盖当天已有日程</string>
+    <string name="schedule_empty_title">还没有导入日程</string>
+    <string name="schedule_empty_hint">点击下方按钮，一键导入今天的时间表</string>
+
+    <!-- 今日页（里程碑 3） -->
+    <string name="home_greeting_morning">早上好，今天也要加油！</string>
+    <string name="home_greeting_afternoon">下午好，今天也要加油！</string>
+    <string name="home_greeting_evening">晚上好，今天也要加油！</string>
+    <string name="home_progress_fmt">今日进度 %1$d%%・已完成 %2$d/%3$d</string>
+    <string name="home_hero_empty">今天没有安排，享受留白</string>
+    <string name="home_next_title">接下来</string>
+    <string name="home_add_task">安排今天</string>
+    <string name="cd_add_task">新建今日任务</string>
+    <string name="home_empty_hint">还没有日程？点一下就能安排</string>
+    <string name="widget_label">今日速览</string>
+    <string name="widget_desc">淡紫玻璃卡片：今日进度、当前任务倒计时与接下来，点按直达执行页</string>
+    <string name="widget_empty_no_task">今天还没有安排 · 点按去安排</string>
+    <string name="widget_empty_all_done">今天全部完成 · 好好休息</string>
+    <string name="widget_status_completed">已完成</string>
+    <string name="widget_status_upcoming">待开始</string>
+    <string name="widget_status_prep">准备中</string>
+    <string name="widget_status_ongoing">进行中</string>
+    <string name="widget_status_missed">已错过</string>
+    <string name="widget_status_break">休息中</string>
+    <string name="widget_label_countdown">后 开 始</string>
+    <string name="widget_label_remaining">剩 余</string>
+    <string name="widget_label_break">休 息 中</string>
+    <string name="widget_label_done">已 完 成</string>
+    <string name="widget_label_next">接 下 来</string>
+    <string name="widget_count_fmt">今日 %1$d/%2$d</string>
+    <string name="widget_gap_fmt">距开始 %1$s</string>
+    <string name="hero_status_soon">即将开始</string>
+    <string name="hero_status_prep">准备中</string>
+    <string name="hero_status_focus">专注中</string>
+    <string name="hero_status_break">休息中</string>
+    <string name="hero_status_due">已到计划时长</string>
+
+    <!-- 任务状态：全 App 统一口径（M32） -->
+    <string name="status_completed">已完成</string>
+    <string name="status_ongoing">进行中</string>
+    <string name="status_upcoming">待开始</string>
+    <string name="status_prep">准备中</string>
+    <string name="status_missed">已错过</string>
+
+    <!-- 日历（里程碑 3） -->
+    <string name="calendar_prev_month">上个月</string>
+    <string name="calendar_next_month">下个月</string>
+    <string name="calendar_today">回到今天</string>
+    <string name="calendar_month_fmt">%1$d 年 %2$d 月</string>
+    <string name="schedule_day_count_fmt">共 %1$d 项</string>
+    <string name="schedule_day_empty">这一天没有安排</string>
+
+    <!-- 参考图一设计增补（里程碑 3 视觉升级） -->
+    <string name="home_welcome_back">欢迎回来</string>
+    <string name="cd_open_schedule">打开日程</string>
+    <string name="stat_focus">专注时间</string>
+    <string name="stat_pomodoro">番茄钟</string>
+    <string name="stat_tasks">任务完成</string>
+    <string name="unit_minutes">分钟</string>
+    <string name="unit_pomodoros">个</string>
+    <string name="unit_tasks">项</string>
+    <string name="summary_title">本月总结</string>
+    <string name="summary_word_great">非常棒！</string>
+    <string name="summary_word_good">还不错～</string>
+    <string name="summary_word_try">再接再厉！</string>
+    <string name="summary_word_wait">等待记录</string>
+    <string name="summary_desc_great">节奏稳定有力，保持这个状态！</string>
+    <string name="summary_desc_good">渐入佳境，再往前一小步！</string>
+    <string name="summary_desc_try">慢慢来，先完成一个小任务。</string>
+    <string name="summary_desc_wait">完成任务后，这里会出现你的月度总结。</string>
+
+    <!-- 计时引擎通知（里程碑 4，规格 5.4 中文、温柔、简短） -->
+    <string name="channel_timer">计时通知</string>
+    <string name="channel_alerts">阶段提醒</string>
+    <string name="notif_action_start">开始</string>
+    <string name="notif_action_skip">跳过</string>
+    <string name="notif_prep_title">准备一下吧</string>
+    <string name="notif_prep_text">「%1$s」5 分钟后开始，准备一下吧</string>
+    <string name="notif_focus_title">该专注了</string>
+    <string name="notif_focus_text">该专注了：%1$s，35 分钟番茄钟开始</string>
+    <string name="notif_focus_text_short">该专注了：%1$s，开始这段专注吧</string>
+    <string name="notif_focus_end_title">番茄钟完成</string>
+    <string name="notif_focus_end_text">休息 10 分钟</string>
+    <string name="notif_break_end_title">休息结束</string>
+    <string name="notif_break_end_text">继续专注</string>
+    <string name="notif_early_title">可以提前完成了</string>
+    <string name="notif_early_text">「%1$s」可以提前完成了</string>
+    <string name="notif_late_title">已到最晚结束时间</string>
+    <string name="notif_late_text">「%1$s」已到最晚结束时间，请记录完成度</string>
+    <string name="notif_ongoing_waiting">计时待命中</string>
+    <string name="notif_ongoing_prep">准备开始：%1$s</string>
+    <string name="notif_ongoing_focus">专注中・第 %1$d 个番茄钟（%2$s）</string>
+    <string name="notif_ongoing_break">休息中</string>
+
+    <!-- 任务执行页（里程碑 5，规格 4.2） -->
+    <string name="exec_label_soon">即将开始</string>
+    <string name="exec_label_prep">准备开始</string>
+    <string name="exec_prep_hint">喝口水、深呼吸，准备进入状态</string>
+    <string name="exec_start_early">提前开始</string>
+    <string name="exec_focus_pomodoro">第 %1$d 个番茄钟</string>
+    <string name="exec_complete">完成</string>
+    <string name="exec_gate_fmt">还需专注 %1$d 分钟才可结束</string>
+    <string name="exec_break_label">休息一下</string>
+    <string name="exec_break_hint">站起来走走、望望远处，让眼睛和肩膀放松一下</string>
+    <string name="exec_skip_break">跳过休息</string>
+    <string name="exec_cd_back">返回</string>
+    <string name="exec_cd_ring_fmt">剩余 %1$d 分 %2$d 秒</string>
+    <string name="exec_empty">当前没有进行中的任务</string>
+
+    <!-- 完成滑块与奖励动画（里程碑 6，规格 7） -->
+    <string name="slider_gear_fmt">完成度 %1$d%%</string>
+    <string name="slider_confirm">确认完成</string>
+    <string name="slider_cancel">取消</string>
+    <string name="reward_banner_100">太棒了！+%1$d 经验 🎉</string>
+    <string name="reward_banner_60">完成得不错，+%1$d 经验</string>
+    <string name="reward_banner_30">开了个头也算数，下一个任务继续加油</string>
+    <string name="reward_streak_fmt">全勤连击 ×%1$d！</string>
+
+    <!-- 统计页（里程碑 7，规格 7.4） -->
+    <string name="stats_kpi_pomodoro">今日番茄</string>
+    <string name="stats_kpi_focus">专注时间</string>
+    <string name="stats_kpi_ontime">准时率</string>
+    <string name="stats_week_title">本周专注（分钟）</string>
+    <string name="stats_detail_title">今日完成明细</string>
+    <string name="stats_detail_elapsed_fmt">已进行 %1$d 分钟・偏差 %2$s%3$d%%</string>
+    <string name="stats_detail_xp_fmt">+%1$d 经验</string>
+    <string name="stats_empty_detail">今天还没有完成记录。</string>
+    <string-array name="week_days_short">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </string-array>
+
+    <!-- 我的页（里程碑 7，规格 7.4 / 9.1） -->
+    <string name="more_perm_title">权限与提醒</string>
+    <string name="more_perm_notif">通知权限：准时提示准备与开始</string>
+    <string name="more_perm_alarm">精确闹钟：在计划时刻准时唤醒计时</string>
+    <string name="more_perm_battery">电池白名单：避免后台计时被系统限制</string>
+    <string name="more_perm_granted">已开启</string>
+    <string name="more_perm_missing">未开启</string>
+    <string name="more_perm_open">去开启</string>
+    <string name="more_const_title">计时规则（只读）</string>
+    <string name="more_const_prep_fmt">准备：%1$d 分钟</string>
+    <string name="more_const_focus_fmt">专注：%1$d 分钟</string>
+    <string name="more_const_break_fmt">休息：%1$d 分钟</string>
+    <string name="more_const_window_fmt">完成窗口：%1$d%%–%2$d%% 计划时长</string>
+    <string name="more_const_gears_fmt">完成度档位：%1$s</string>
+    <string name="more_export_title">数据</string>
+    <string name="more_export_pick">导出日期：%1$s</string>
+    <string name="more_export_share">分享日程 JSON</string>
+    <string name="more_export_save">保存日程 JSON 到文件</string>
+    <string name="more_export_empty">还没有可导出的日程。</string>
+    <string name="more_about_title">关于</string>
+    <string name="more_about_body">Pre2do・全部数据保存在本机，无需联网与账号。</string>
+
+    <!-- 今日页权限引导卡（规格 9.1） -->
+    <string name="perm_card_title">打开提醒通知</string>
+    <string name="perm_card_body">开启后可在任务准备与开始时准时收到温柔提示。</string>
+
+    <!-- M32 使用逻辑优化 -->
+    <string name="exec_empty_action">回到今日</string>
+    <string name="exec_empty_schedule">去安排日程</string>
+    <string name="import_save_failed">保存失败</string>
+    <string name="import_retry">重新选择</string>
+    <string name="import_parsing_hint">正在解析日程…</string>
+    <string name="more_export_saved">日程已保存</string>
+    <string name="more_export_failed">保存失败，请重试</string>
+    <string name="more_widget_title">桌面小组件</string>
+    <string name="more_widget_body">把「今日速览」钉到桌面，随时看见今日进度与倒计时</string>
+    <string name="more_widget_add">添加到桌面</string>
+    <string name="more_widget_sent">已发起添加请求，请在系统弹窗中点「添加」</string>
+    <string name="more_widget_fallback">此桌面暂不支持一键添加：请长按桌面空白处 → 小组件 → Pre2do →「今日速览」拖到桌面</string>
+    <string name="cd_open_week">打开本周日程</string>
+</resources>

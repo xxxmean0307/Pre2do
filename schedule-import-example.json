@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "title": "周三冲刺日",
+  "date": "2026-09-23",
+  "tasks": [
+    {
+      "title": "高数第三章刷题",
+      "start": "09:00",
+      "durationMin": 90,
+      "stage": "上午",
+      "location": "图书馆三楼",
+      "note": "极限部分 20 题",
+      "color": "pink"
+    },
+    {
+      "title": "英语听力精练",
+      "start": "10:40",
+      "durationMin": 50,
+      "stage": "上午",
+      "color": "purple"
+    },
+    {
+      "title": "午餐与散步",
+      "start": "12:00",
+      "durationMin": 60,
+      "stage": "中午",
+      "color": "peach"
+    },
+    {
+      "title": "写课程论文初稿",
+      "start": "14:00",
+      "durationMin": 120,
+      "stage": "下午",
+      "note": "先列提纲再写正文",
+      "color": "blue"
+    },
+    {
+      "title": "健身：背部训练",
+      "start": "17:30",
+      "durationMin": 45,
+      "stage": "傍晚",
+      "color": "green"
+    }
+  ]
+}

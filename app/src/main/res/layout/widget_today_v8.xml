@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 桌面小组件「今日速览」v8（M32 · 全量重写）
+     对齐 App 主视觉：淡紫流动渐变 + 28dp 液态玻璃外壳（镜面描边/冷青色散）、
+     半透明玻璃主角卡、玻璃状态胶囊、淡紫→樱粉进度条、同心开环番茄钟。
+     RemoteViews 白名单禁裸 <View> 垫片，所有间距一律用外边距 / padding。 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_glass_bg">
+
+    <!-- 折射色晕：随每分钟刷新切换相位，模拟 App 的视频流动背景 -->
+    <ImageView
+        android:id="@+id/widgetGlow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/widget_glass_glow0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- 头部：日期 + 今日计数 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/widgetDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="11 月 7 日・周六"
+                android:textColor="#FF8B7E88"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/widgetCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="今日 0/3"
+                android:textColor="#FFB79CFF"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- 主角玻璃卡 -->
+        <LinearLayout
+            android:id="@+id/widgetHero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/widget_glass_card"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/widgetHeroTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/nunito_bold"
+                    android:maxLines="1"
+                    android:text="任务标题"
+                    android:textColor="#FF332933"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/widgetHeroChip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/widget_glass_chip"
+                    android:fontFamily="@font/nunito_bold"
+                    android:paddingLeft="9dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="9dp"
+                    android:paddingBottom="2dp"
+                    android:text="即将开始"
+                    android:textColor="#FFFF8FB8"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/widgetHeroBig"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo2_extrabold"
+                        android:letterSpacing="-0.03"
+                        android:shadowColor="#55FFFFFF"
+                        android:shadowDx="0"
+                        android:shadowDy="3"
+                        android:shadowRadius="8"
+                        android:text="0:00:00"
+                        android:textColor="#FF332933"
+                        android:textSize="34sp" />
+
+                    <TextView
+                        android:id="@+id/widgetHeroBigLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:letterSpacing="0.2"
+                        android:text="后 开 始"
+                        android:textColor="#FF8B7E88"
+                        android:textSize="9sp" />
+                </LinearLayout>
+
+                <!-- 番茄同心开环：≥70 分钟任务才出现，环心＝当前番茄段剩余 -->
+                <FrameLayout
+                    android:id="@+id/widgetPomoWrap"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/widget_glass_ring" />
+
+                    <TextView
+                        android:id="@+id/widgetPomoCenter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center"
+                        android:text="17:38"
+                        android:textColor="#FF8E6BB8"
+                        android:textSize="9sp" />
+                </FrameLayout>
+
+                <!-- 无番茄时此处显示时长（与 App 英雄卡右下角一致） -->
+                <TextView
+                    android:id="@+id/widgetHeroTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="60 分钟"
+                    android:textColor="#FF8B7E88"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/widgetBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="8dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/widget_glass_progress" />
+
+        <LinearLayout
+            android:id="@+id/widgetNextRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/widget_glass_pill"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:letterSpacing="0.16"
+                android:text="接 下 来"
+                android:textColor="#FFB79CFF"
+                android:textSize="9sp" />
+
+            <ImageView
+                android:id="@+id/widgetNextDot"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/widget_dot_purple" />
+
+            <TextView
+                android:id="@+id/widgetNextTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="11:00"
+                android:textColor="#FF7B62C4"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/widgetNextLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunito_semibold"
+                android:maxLines="1"
+                android:text="新任务"
+                android:textColor="#FF332933"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/widgetNextStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="距开始 4 小时"
+                android:textColor="#FF8B7E88"
+                android:textSize="9sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/widgetEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:gravity="center"
+            android:text="今天还没有安排 · 点按去安排"
+            android:textColor="#FF8B7E88"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</FrameLayout>

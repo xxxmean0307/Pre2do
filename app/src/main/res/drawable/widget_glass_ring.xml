@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 番茄同心开环（与 App 执行页同款：两道不闭合弧，环心留给剩余时间） -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="42dp"
+    android:height="42dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:pathData="M 38.14,9.86 A 20,20 0 1 1 9.86,9.86"
+        android:strokeColor="#668E6BB8"
+        android:strokeWidth="2"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M 16.75,36.56 A 14.5,14.5 0 1 1 31.25,36.56"
+        android:strokeColor="#DDB79CFF"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000" />
+</vector>

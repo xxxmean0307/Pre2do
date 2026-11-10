@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 折射色晕 · 相位 0：淡紫与樱粉两团柔光（模拟视频背景透过玻璃的色散） -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="-40dp" android:top="-46dp" android:right="176dp" android:bottom="46dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="105dp"
+                android:startColor="#6EB79CFF"
+                android:centerColor="#32B79CFF"
+                android:endColor="#00B79CFF" />
+        </shape>
+    </item>
+    <item android:left="172dp" android:top="-18dp" android:right="-52dp" android:bottom="72dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="92dp"
+                android:startColor="#5AFF8FB8"
+                android:centerColor="#26FF8FB8"
+                android:endColor="#00FF8FB8" />
+        </shape>
+    </item>
+</layer-list>

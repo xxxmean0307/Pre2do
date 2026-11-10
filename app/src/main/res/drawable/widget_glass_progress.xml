@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 玻璃进度条：白釉轨道 + 淡紫→樱粉渐变填充 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="4dp" />
+            <solid android:color="#3DFFFFFF" />
+            <stroke android:width="0.5dp" android:color="#66FFFFFF" />
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="4dp" />
+                <gradient
+                    android:angle="0"
+                    android:startColor="#FFB79CFF"
+                    android:endColor="#FFFF8FB8" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

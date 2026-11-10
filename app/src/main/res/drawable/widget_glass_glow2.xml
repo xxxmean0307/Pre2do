@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 折射色晕 · 相位 2：光团下沉并偏冷（每分钟随倒计时刷新切换） -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="82dp" android:top="-24dp" android:right="62dp" android:bottom="76dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="110dp"
+                android:startColor="#5A8AB8FF"
+                android:centerColor="#268AB8FF"
+                android:endColor="#008AB8FF" />
+        </shape>
+    </item>
+    <item android:left="-36dp" android:top="24dp" android:right="192dp" android:bottom="12dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="radial"
+                android:gradientRadius="88dp"
+                android:startColor="#4EB79CFF"
+                android:centerColor="#20B79CFF"
+                android:endColor="#00B79CFF" />
+        </shape>
+    </item>
+</layer-list>

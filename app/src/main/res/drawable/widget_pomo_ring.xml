@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 番茄开环（M28.14）：两道不闭合同心弧（外浅内实），环心留白给剩余时间文字 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- 外环：顶部留口（约 90°），淡紫雾 -->
+    <path
+        android:pathData="M 38.14,9.86 A 20,20 0 1 1 9.86,9.86"
+        android:strokeColor="#4D8E6BB8"
+        android:strokeWidth="2"
+        android:fillColor="#00000000" />
+
+    <!-- 内环：底部留口（约 60°），番茄紫 -->
+    <path
+        android:pathData="M 16.75,36.56 A 14.5,14.5 0 1 1 31.25,36.56"
+        android:strokeColor="#B38E6BB8"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000" />
+</vector>

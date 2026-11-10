@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 状态玻璃胶囊：半透明白釉 + 镜面细边（与底栏液态玻璃同族） -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#7AFFFFFF" />
+    <corners android:radius="12dp" />
+    <stroke android:width="0.7dp" android:color="#CCFFFFFF" />
+</shape>
